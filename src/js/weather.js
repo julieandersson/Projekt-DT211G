@@ -15,6 +15,7 @@ function getWeather(destination) {
         .then(response => response.json())
         .then(data => {
             displayWeather(data);
+            document.getElementById("weatherInfo").classList.add("visible");
         })
         .catch(error => {
             console.log('Det uppstod ett fel:', error);
@@ -47,5 +48,3 @@ function displayWeather(weatherData) {
 
     weatherInfo.innerHTML = weatherHTML;
 }
-
-
