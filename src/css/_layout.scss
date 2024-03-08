@@ -4,7 +4,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('../images/beachbackground.jpg');
+    font-family: base.$primary-font;
+    background-image: url('../images/beachbackground.webp');
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -29,6 +30,29 @@ header {
     font-size: 0.8em;
     margin: 0;
     text-decoration: none;
+}
+
+main {
+    background-color: base.$background-beige;
+    opacity: 80%;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: base.$box-shadow;
+}
+
+article {
+    width: 80%;
+    max-width: 80ch;
+    margin: 0 auto;
+    line-height: 1.8em;
+}
+
+h1 {
+    font-family: base.$primary-font;
+    color: base.$standard-white;
+    padding-top: 10px;
+    text-align: center;
 }
 
 /* Styling av meny för mobilenheter */
