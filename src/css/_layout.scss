@@ -11,7 +11,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    cursor: url('../images/suncursor.png'), auto;
+
 }
 
 /* Generell design av Header */
@@ -60,6 +60,36 @@ h1 {
     animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+#searchForm {
+    background-color: base.$primary-blue;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 550px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#submit {
+    padding: 10px 20px;
+    background-color: base.$standard-white;
+    color: base.$standard-black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: base.$hover-blue;
 }
 
 /* Styling av meny för mobilenheter */
