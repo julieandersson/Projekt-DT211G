@@ -30,9 +30,20 @@ function displayWeather(weatherData) {
     var temperatureCelsius = temperatureKelvin - 273.15; // Omvandla från Kelvin till Celsius
     var weatherDescription = weatherData.weather[0].description;
 
+    var weatherIcon;
+    if (weatherDescription.includes("mulet")) {
+        weatherIcon = "src/images/cloudy.png";
+    } else if (weatherDescription.includes("soligt")) {
+        weatherIcon = "src/images/sunny.png";
+    }
+
     var weatherHTML = "<h2>Väder för " + cityName + "</h2>";
     weatherHTML += "<p>Temperatur: " + temperatureCelsius.toFixed(1) + "°C</p>"; // Visa temperatur i Celsius
     weatherHTML += "<p>Väderförhållanden: " + weatherDescription + "</p>";
+
+    if (weatherIcon) {
+        weatherHTML += "<img src='" + weatherIcon + "' alt='" + weatherDescription + "'>";
+    }
 
     weatherInfo.innerHTML = weatherHTML;
 }

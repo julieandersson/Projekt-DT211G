@@ -92,6 +92,12 @@ input[type="text"] {
     background-color: base.$hover-blue;
 }
 
+#weatherInfo {
+    background-color: base.$standard-white;
+    padding: 5%;
+    border-radius: 10px;
+}
+
 /* Styling av meny för mobilenheter */
 nav {
     background-color: base.$primary-blue;
