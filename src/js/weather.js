@@ -32,11 +32,19 @@ function displayWeather(weatherData) {
     var weatherDescription = weatherData.weather[0].description;
 
     var weatherIcon;
-    if (weatherDescription.includes("mulet")) {
-        weatherIcon = "src/images/cloudy.png";
-    } else if (weatherDescription.includes("soligt")) {
-        weatherIcon = "src/images/sunny.png";
-    }
+    if (weatherDescription.includes("mulet") || weatherDescription.includes("molnigt")) {
+    weatherIcon = new URL('./../images/cloudy.png', import.meta.url);
+   } else if (weatherDescription.includes("soligt")) {
+    weatherIcon = new URL('./../images/sunny.png', import.meta.url);
+   } else if (weatherDescription.includes("klar himmel")) {
+    weatherIcon = new URL('./../images/clear.png', import.meta.url);
+   } else if (weatherDescription.includes("snö")) {
+    weatherIcon = new URL('./../images/snow.png', import.meta.url);
+   } else if (weatherDescription.includes("växlande molnighet")) {
+    weatherIcon = new URL('./../images/mixedclouds.png', import.meta.url);
+   } else if (weatherDescription.includes("lätt regn") || weatherDescription.includes("regn")) {
+    weatherIcon = new URL('./../images/rain.png', import.meta.url);
+   }
 
     var weatherHTML = "<h2>Väder för " + cityName + "</h2>";
     weatherHTML += "<p>Temperatur: " + temperatureCelsius.toFixed(1) + "°C</p>"; // Visa temperatur i Celsius
