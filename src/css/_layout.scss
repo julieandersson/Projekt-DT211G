@@ -93,10 +93,18 @@ input[type="text"] {
 }
 
 #weatherInfo {
+    width: 250px;
     display: none;
     background-color: base.$standard-white;
     padding: 5%;
     border-radius: 10px;
+    margin: 0 auto;
+    animation-name: weatherSize;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+
 }
 
 #weatherInfo.visible {

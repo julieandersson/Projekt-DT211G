@@ -36,7 +36,7 @@ function displayWeather(weatherData) {
     // Visa olika bilder beroende på temperaturen på angiven plats
    var temperatureIcon;
 
-    if (weatherDescription.includes("mulet") || weatherDescription.includes("molnigt")) {
+    if (weatherDescription.includes("mulet") || weatherDescription.includes("molnigt") || weatherDescription.includes("lätt molnighet")) {
     weatherIcon = new URL('./../images/cloudy.png', import.meta.url);
    } else if (weatherDescription.includes("soligt")) {
     weatherIcon = new URL('./../images/sunny.png', import.meta.url);
@@ -75,3 +75,8 @@ function displayWeather(weatherData) {
 
     weatherInfo.innerHTML = weatherHTML;
 }
+
+// Skapar en autocomplete för inmatningsfältet
+var autocomplete = new google.maps.places.Autocomplete(
+    document.getElementById("destination")
+);
