@@ -4,17 +4,17 @@ document.getElementById("searchForm").addEventListener("submit", function(event)
     event.preventDefault(); 
 
     var destination = document.getElementById("destination").value;
-    getWeather(destination);
+    getWeatherForecast(destination);
 });
 
-function getWeather(destination) {
+function getWeatherForecast(destination) {
     var apiKey = '1741ff0be3549e9c58cf88c63b2d789a'; 
-    var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${destination}&appid=${apiKey}&lang=sv`;
+    var apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${destination}&appid=${apiKey}&lang=sv`;
 
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            displayWeather(data);
+            displayWeatherForecast(data);
             document.getElementById("weatherInfo").style.display = "block";
             document.getElementById("travelPictures").querySelector("p").style.display = "block";
             // Hämta alla <picture>-element inom #travelPictures
@@ -29,14 +29,24 @@ function getWeather(destination) {
         });
 }
 
-function displayWeather(weatherData) {
+function displayWeatherForecast(weatherData) {
     var weatherInfo = document.getElementById("weatherInfo");
     weatherInfo.innerHTML = ""; // Rensa tidigare väderinformation
 
-    var cityName = weatherData.name;
-    var temperatureKelvin = weatherData.main.temp;
-    var temperatureCelsius = temperatureKelvin - 273.15; // Omvandla från Kelvin till Celsius
-    var weatherDescription = weatherData.weather[0].description;
+    var dailyForecasts = {};
+    weatherData.list.forEach(function(forecast) {
+        var date = new Date(forecast.dt * 1000).toLocaleDateString();
+        if (!dailyForecasts[date]) {
+            dailyForecasts[date] = forecast;
+        }
+    });
+
+    Object.values(dailyForecasts).forEach(function(dayForecast) {
+        var forecastTime = new Date(dayForecast.dt * 1000); // Omvandla från sekunder till millisekunder och skapa ett datumobjekt
+        var temperatureKelvin = dayForecast.main.temp;
+        var temperatureCelsius = temperatureKelvin - 273.15; // Omvandla från Kelvin till Celsius
+        var weatherDescription = dayForecast.weather[0].description;
+
 
     // Visa olika bilder beroende på väderbeskrivning på angiven plats
     var weatherIcon;
@@ -74,13 +84,14 @@ function displayWeather(weatherData) {
         temperatureIcon = new URL('./../images/minustemp.png', import.meta.url);
     }
 
-    var weatherHTML = "<h2>Väder för " + cityName + "</h2>";
-    weatherHTML += "<p>Temperatur: " + temperatureCelsius.toFixed(1) + "°C</p>"; // Visa temperatur i Celsius
-    weatherHTML += "<p>Väderförhållanden: " + weatherDescription + "</p>";
-    weatherHTML += "<img src='" + weatherIcon + "' alt='Väderikon'>";
-    weatherHTML += "<img src='" + temperatureIcon + "' alt='Temperaturikon'>";
+    var forecastHTML = "<p>";
+    forecastHTML += "Dag: " + forecastTime.toLocaleDateString() + "<br>";
+    forecastHTML += "Temperatur: " + temperatureCelsius.toFixed(1) + "°C<br>";
+    forecastHTML += "Väderförhållanden: " + weatherDescription + "<br>";
+    forecastHTML += "</p>";
 
-    weatherInfo.innerHTML = weatherHTML;
+    weatherInfo.innerHTML += forecastHTML;
+});
 }
 
 // Skapar en autocomplete för inmatningsfältet
