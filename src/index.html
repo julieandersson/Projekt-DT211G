@@ -39,11 +39,12 @@
             </ul>
         </nav>
     </header>
+
+    <h1>PLANERA DIN KOMMANDE RESA</h1>
 <main>
     
-        <h1>PLANERA DIN KOMMANDE RESA</h1>
-    <article>
-        <p>Har du planer på att resa? Fyll i din destination nedan för att få information om väder, flygpriser och hotellpriser.</p>
+    <article><br>
+        <p>Har du planer på att resa? Fyll i din destination nedan för att få information om vädret!</p>
         <form id="searchForm">
             <label for="destination">Ange destination:</label>
             <input type="text" id="destination" name="destination" placeholder="Vad är ditt drömresemål?" required>
@@ -51,7 +52,29 @@
             <div id="autocomplete"></div>
         </form><br>
 
-        <div id="weatherInfo"></div>
+        <div id="weatherInfo">
+        </div><br>
+
+        <div id="travelPictures">
+            <p>Vill du inspireras av bilder från våra mest populära destinationer? Klicka på någon av bilderna nedan för att ta del av fantastiska bilder från din drömdestination.
+            </p>
+            <picture>
+                <source srcset="images/spain1.jpg?as=webp&width=400" type="image/webp">
+            <img src="images/spain1.jpg" alt="Bild på Spanien">
+            </picture>
+            <picture>
+                <source srcset="images/italy1.jpg?as=webp&width=400" type="image/webp">
+            <img src="images/italy1.jpg" alt="Bild på Spanien">
+            </picture>
+            <picture>
+                <source srcset="images/greece1.jpg?as=webp&width=400" type="image/webp">
+            <img src="images/greece1.jpg" alt="Bild på Spanien">
+            </picture>
+            <picture>
+                <source srcset="images/croatia1.jpg?as=webp&width=400" type="image/webp">
+            <img src="images/croatia1.jpg" alt="Bild på Spanien">
+            </picture>
+        </div>
 
     </article><br>
 

@@ -15,7 +15,14 @@ function getWeather(destination) {
         .then(response => response.json())
         .then(data => {
             displayWeather(data);
-            document.getElementById("weatherInfo").classList.add("visible");
+            document.getElementById("weatherInfo").style.display = "block";
+            document.getElementById("travelPictures").querySelector("p").style.display = "block";
+            // Hämta alla <picture>-element inom #travelPictures
+            var pictures = document.getElementById("travelPictures").querySelectorAll("picture");
+            // Loopa över varje <picture>-element och lägg till klassen visible
+            pictures.forEach(function(picture) {
+                picture.classList.add("visible");
+            });
         })
         .catch(error => {
             console.log('Det uppstod ett fel:', error);

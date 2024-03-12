@@ -50,8 +50,13 @@ article {
     line-height: 1.8em;
 }
 
+article p {
+    text-align: center;
+}
+
 h1 {
     font-family: base.$primary-font;
+    font-size: 2.5em;
     color: base.$standard-white;
     font-weight: 500;
     padding-top: 10px;
@@ -92,6 +97,8 @@ input[type="text"] {
     background-color: base.$hover-blue;
 }
 
+/* Styling för väder-rutan med väderinfo */
+
 #weatherInfo {
     width: 250px;
     display: none;
@@ -104,14 +111,52 @@ input[type="text"] {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-direction: alternate;
-
 }
+
 
 #weatherInfo.visible {
     display: block; 
 }
 
+/* Styling för element med bilder */
 
+#travelPictures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#travelPictures p {
+    display: none; 
+}
+
+#travelPictures p.visible {
+    display: block; 
+}
+
+#travelPictures picture {
+    display: none;
+    flex-basis: calc(50% - 10px);
+    margin: 5px;
+}
+
+#travelPictures picture img {
+    width: 100%;
+}
+
+#travelPictures picture.visible {
+    display: block;
+}
+
+.image-text {
+    position: absolute;
+    top: 158%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
 
 /* Styling av meny för mobilenheter */
 nav {
