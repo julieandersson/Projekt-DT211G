@@ -125,10 +125,10 @@ input[type="text"] {
 
 /* Styling för element med bilder */
 
-#travelPictures {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+#picture-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
 #travelPictures p {
@@ -146,18 +146,25 @@ input[type="text"] {
 }
 
 #travelPictures picture img {
+    border-radius: 5px;
     width: 100%;
+    transition: transform 0.3s ease;
+}
+
+#travelPictures picture img:hover {
+    transform: scale(1.05);
+    cursor: url('../images/suncursor.png'), auto;
 }
 
 #travelPictures picture.visible {
     display: block;
 }
 
+/* Styling för flaggor */
+
 .flag-container {
     margin: 0 auto;
 }
-
-/* Styling för flaggor */
 
 #flag-container .flag-img {
     display: block;
