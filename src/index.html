@@ -9,6 +9,7 @@
 
     <script src="js/main.js" type="module"></script>
     <script src="js/weather.js" type="module"></script>
+    <script src="js/flags.js" type="module"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO3pf9UA59KBmOZI0MQB6bzcb87eFD_xQ&libraries=places"></script>
 </head>
 <body>
@@ -44,13 +45,15 @@
 <main>
     
     <article><br>
-        <p>Har du planer på att resa? Fyll i stad och land för att få information om vädret!</p>
+        <p>Har du planer på att resa till antingen Spanien, Grekland, Italien eller Kroatien? Fyll i något av länderna här för att få information om landets invånare, flagga, huvudstad och väderinformation!</p>
         <form id="searchForm">
             <label for="destination">Ange destination:</label>
             <input type="text" id="destination" name="destination" placeholder="Vad är ditt drömresemål?" required>
             <button type="submit" id="submit">SÖK</button>
             <div id="autocomplete"></div>
         </form><br>
+
+        <div id="result"></div>
 
         <div id="weatherInfo">
         </div><br>
