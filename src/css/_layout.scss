@@ -100,7 +100,7 @@ input[type="text"] {
 /* Styling för väder-rutan med väderinfo */
 
 #weatherInfo {
-    width: 250px;
+    width: 550px;
     display: none;
     background-color: base.$standard-white;
     padding: 5%;
@@ -116,6 +116,10 @@ input[type="text"] {
 
 #weatherInfo.visible {
     display: block; 
+}
+
+.weather-icon, .temperature-icon {
+    margin-left: 40px;
 }
 
 /* Styling för element med bilder */
