@@ -5,6 +5,9 @@ document.getElementById("searchForm").addEventListener("submit", function(event)
 
     var destination = document.getElementById("destination").value;
     getWeatherForecast(destination);
+
+    // Dölj bilden på startsidan genom att ta bort klassen "show"
+    document.getElementById("indexpic").classList.remove("show");
 });
 
 function getWeatherForecast(destination) {

@@ -96,6 +96,21 @@ input[type="text"] {
     background-color: base.$hover-blue;
 }
 
+#indexpic picture img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+#indexpic {
+    display: none; 
+}
+
+#indexpic.show {
+    display: block; 
+}
+
+
 /* Styling för väder-rutan med väderinfo */
 
 #weatherInfo {
@@ -162,6 +177,11 @@ input[type="text"] {
 /* Styling för flaggor */
 
 .flag-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     margin: 0 auto;
 }
 
@@ -174,7 +194,6 @@ input[type="text"] {
 .flag-img {
     width: 200px;
 }
-
 
 /* Styling av meny för mobilenheter */
 nav {
