@@ -106,6 +106,7 @@ input[type="text"] {
     padding: 5%;
     border-radius: 10px;
     margin: 0 auto;
+    margin-top: 20px;
     animation-name: weatherSize;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -150,6 +151,22 @@ input[type="text"] {
 
 #travelPictures picture.visible {
     display: block;
+}
+
+.flag-container {
+    margin: 0 auto;
+}
+
+/* Styling för flaggor */
+
+#flag-container .flag-img {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.flag-img {
+    width: 200px;
 }
 
 
