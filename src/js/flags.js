@@ -30,16 +30,10 @@ submit.addEventListener("click", () => {
         if (data && data.length > 0) {
             // Hämta flaggans URL från API
             var flagURL = data[0].flags.svg;
-            // Hämta antalet invånare från API
-            var population = data[0].population;
-            // Hämta landets huvudstad från API
-            var capital = data[0].capital;
 
             // Uppdatera HTML-elementet för att visa flagga, invånare och huvudstad
             resultDiv.innerHTML = `
             <img src="${flagURL}" alt="Flagga för ${countryName}" class="flag-img">
-            <p>Antal invånare: ${population}</p>
-                <p>Huvudstad: ${capital}</p>
             `;
         } else {
             // Om landet inte hittades, visa ett felmeddelande
