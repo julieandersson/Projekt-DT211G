@@ -13,6 +13,35 @@ body {
     background-attachment: fixed;
 }
 
+.spain-background {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    background-image: url('../images/background1.jpg?as=webp&width=1800');
+}
+
+.italy-background {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    background-image: url('../images/background2.jpg?as=webp&width=1800');
+}
+
+.france-background {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    background-image: url('../images/background3.jpg?as=webp&width=1800');
+}
+
+.croatia-background {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    background-image: url('../images/background4.jpg?as=webp&width=1800');
+}
+
+
 /* Generell design av Header */
 header {
     height: 90px;
