@@ -228,6 +228,23 @@ input[type="text"] {
     width: 200px;
 }
 
+#api-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#api-table th, #api-table td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+#api-table img {
+    height: 50px;
+    width: auto;
+}
+
+
 footer {
     height: 80px;
     background-color: base.$primary-blue;
