@@ -21,23 +21,17 @@ body {
 }
 
 .italy-background {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh; 
+    @extend .spain-background;
     background-image: url('../images/background2.jpg?as=webp&width=1800');
 }
 
 .france-background {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh; 
+    @extend .spain-background; 
     background-image: url('../images/background3.jpg?as=webp&width=1800');
 }
 
 .croatia-background {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh; 
+    @extend .spain-background; 
     background-image: url('../images/background4.jpg?as=webp&width=1800');
 }
 
@@ -71,29 +65,29 @@ nav {
     opacity: 80%;
     padding: 5px; 
     margin: 0 auto;
-}
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
 
-li {
-    display: inline;
-}
+    li {
+        display: inline;
 
-a {
-    text-decoration: none;
-    color: #000000;
-}
+        a {
+            text-decoration: none;
+            color: #000000;
 
-a:hover {
-    color: base.$hover-blue;
+            &:hover {
+                color: base.$hover-blue;
+            }
+        }
+    }
 }
 
 span {
-    color: #000000;
+    color: base.$standard-black;
     font-weight: bold;
 }
 
@@ -139,7 +133,7 @@ h1 {
 
 input[type="text"] {
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid base.$standard-white;
     border-radius: 5px;
     font-size: 16px;
     width: 550px;
@@ -242,7 +236,7 @@ input[type="text"] {
     display: block;
 }
 
-picture img {
+.rotate img {
     width: 80%;
     display: block;
     margin: 0 auto;
@@ -300,7 +294,8 @@ footer {
 
 footer p {
     font-size: 13px;
+    line-height: 1.6em;
     font-weight: 500;
-    padding-top: 30px;
+    padding-top: 20px;
     color: base.$standard-white;
 }
