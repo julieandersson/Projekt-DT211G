@@ -21,3 +21,23 @@
         transform: scale(1.01, 1.01);
     }
 }
+
+/* keyframe för startsidan där bilder ändras övertid */
+
+@keyframes slide {
+  0% {
+    background: url("../images/indexpic.jpg?width=1536&as=webp");
+  }
+  25% {
+    background: url("../images/indexpic2.jpg?width=1536&as=webp");
+  }
+  50% {
+    background: url("../images/indexpic3.jpg?width=1536&as=webp");
+  }
+  75% {
+    background: url("../images/indexpic4.jpg?width=1536&as=webp");
+  }
+  100% {
+    background: url("../images/indexpic.jpg?width=1536&as=webp");
+  }
+}

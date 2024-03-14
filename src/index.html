@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/main.scss">
     <title>Projekt</title>
 
-    <script src="js/main.js" type="module"></script>
     <script src="js/weather.js" type="module"></script>
     <script src="js/flags.js" type="module"></script>
 
@@ -16,30 +15,7 @@
 <body>
 
     <header>
-        <div class="logo">Julie Andersson</div>
-        <!-- Meny knapp för att öppna mobilmenyn-->
-        <button class="menu-btn open" id="open-menu">
-            <span class="menu-icon">
-                <span class="bars"></span>
-                <span class="bars"></span>
-                <span class="bars"></span>
-            </span>
-            <span class="menu-text"></span>
-        </button>
-        <!-- navigering -->
-        <nav id="nav-menu">
-            <!-- Knapp som visas om mobilmenyn är utfälld -->
-            <button class="menu-btn close" id="close-menu">
-                <span class="menu-icon">
-                    <span class="bars cross1"></span>
-                    <span class="bars cross2"></span>
-                </span>
-                <span class="menu-text"></span>
-            </button>
-            <ul>
-                <li><a href="index.html"><i class="fa-solid fa-earth-americas fa-spin"></i></a></li>
-            </ul>
-        </nav>
+        <div class="logo"><a href="index.html"><i class="fa-solid fa-earth-americas fa-spin"></i></a></div>
     </header>
 
     <h1>PLANERA DIN KOMMANDE RESA</h1>
@@ -101,11 +77,11 @@
     </article><br>
 </main>
 <div id="indexpic" class="show">
-    <picture>
-        <source srcset="images/indexpic.jpg?as=webp&width=1100" type="image/webp">
-    <img src="images/indexpic.jpg" alt="bild från en lagun">
-    </picture>
 </div>
+
+<footer>
+    <p>Julie Andersson - DT211G</p>
+</footer>
 
 </body>
 </html>
