@@ -61,6 +61,43 @@ header {
     text-decoration: none;
 }
 
+/* styling för breadcrumb */
+
+nav {
+    width: 265px;
+    background-color: base.$background-beige;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 80%;
+    padding: 5px; 
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    color: base.$hover-blue;
+}
+
+span {
+    color: #000000;
+    font-weight: bold;
+}
+
+
 main {
     background-color: base.$background-beige;
     opacity: 80%;
@@ -187,17 +224,16 @@ input[type="text"] {
 
 #travelPictures picture {
     display: none;
-    flex-basis: calc(50% - 10px);
-    margin: 5px;
+    margin: 10px;
 }
 
-#travelPictures picture img {
+#travelPictures picture img, #travelPictures2 picture img {
     border-radius: 5px;
     width: 100%;
     transition: transform 0.3s ease;
 }
 
-#travelPictures picture img:hover {
+#travelPictures picture img:hover, #travelPictures2 picture img:hover  {
     transform: scale(1.05);
     cursor: url('../images/suncursor.png'), auto;
 }
@@ -230,8 +266,10 @@ input[type="text"] {
 
 #api-table {
     border-collapse: collapse;
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
+    background-color: base.$background-beige;
+    opacity: 80%;
 }
 
 #api-table th, #api-table td {

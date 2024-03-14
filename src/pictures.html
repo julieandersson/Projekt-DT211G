@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.scss">
+    <title>Projekt</title>
+
+    <script src="js/weather.js" type="module"></script>
+    <script src="js/flags.js" type="module"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO3pf9UA59KBmOZI0MQB6bzcb87eFD_xQ&libraries=places"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><a href="index.html"><i class="fa-solid fa-earth-americas fa-spin"></i></a></div>
+    </header><br>
+
+    <nav class ="Breadcrumb">
+        <ul>
+            <li><a href="index.html">START /</a></li>
+            <li><span>AKTUELL SIDA</span></li>
+        </ul>
+    </nav><br>
+
+<main>
+    
+    <article><br>
+        <div id="travelPictures2">
+            <p>Vill du inspireras av bilder från våra mest populära destinationer och få lite mer information om länderna?<br>
+                Klicka på någon av bilderna nedan!
+            </p>
+
+        <div id="picture-grid">
+
+        <a href="spain.html">
+            <picture>
+                <source srcset="images/spain1.jpg?as=webp&width=400" type="image/webp">
+            <img src="images/spain1.jpg" alt="Bild på Spanien">
+            </picture>
+        </a>
+
+        <a href="italy.html">
+            <picture>
+                <source srcset="images/italy1.jpg?as=webp&width=400" type="image/webp">
+            <img src="images/italy1.jpg" alt="Bild på Italien">
+            </picture>
+        </a>
+
+        <a href="france.html">
+            <picture>
+                <source srcset="images/greece1.jpg?as=webp&width=400" type="image/webp">
+            <img src="images/greece1.jpg" alt="Bild på Frankrike">
+            </picture>
+        </a>
+
+        <a href="croatia.html">
+            <picture>
+                <source srcset="images/croatia1.jpg?as=webp&width=400" type="image/webp">
+            <img src="images/croatia1.jpg" alt="Bild på Kroatien">
+            </picture>
+        </a>
+    </div>
+
+        </div>
+    </article><br>
+</main>
+
+<footer>
+    <p>Julie Andersson - DT211G</p>
+</footer>
+
+</body>
+</html>
