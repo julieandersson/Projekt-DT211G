@@ -242,6 +242,14 @@ input[type="text"] {
     display: block;
 }
 
+picture img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    animation: rotatePicture 2s linear infinite alternate;
+}
+
 /* Styling för flaggor */
 
 .flag-container {

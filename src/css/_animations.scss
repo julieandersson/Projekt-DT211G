@@ -41,3 +41,14 @@
     background: url("../images/indexpic.jpg?width=1536&as=webp");
   }
 }
+
+/* rotation för bilder på länder-sidorna */
+
+@keyframes rotatePicture {
+  from {
+      transform: rotate(-1deg);
+  }
+  to {
+      transform: rotate(1deg);
+  }
+}

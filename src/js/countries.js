@@ -35,12 +35,12 @@ async function displayCountriesTable(countriesOfInterest) {
 
         // Landets befolkning
         const populationCell = document.createElement('td')
-        populationCell.textContent = (country.population / 1000000).toFixed(2)
+        populationCell.textContent = (country.population / 1000000).toFixed(2) + " million"
         row.appendChild(populationCell)
 
         // Landets yta
         const areaCell = document.createElement('td')
-        areaCell.textContent = country.area
+        areaCell.textContent = country.area + " km²"
         row.appendChild(areaCell)
 
         // Landets landskod
