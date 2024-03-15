@@ -55,6 +55,10 @@ header {
     text-decoration: none;
 }
 
+.logo a:hover {
+    color: base.$hover-blue;
+}
+
 /* styling för breadcrumb */
 
 nav {
@@ -89,6 +93,10 @@ nav {
 span {
     color: base.$standard-black;
     font-weight: bold;
+}
+
+em {
+    font-size: 12px;
 }
 
 

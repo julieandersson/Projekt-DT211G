@@ -31,14 +31,15 @@ submit.addEventListener("click", () => {
             // Hämta flaggans URL från API
             var flagURL = data[0].flags.svg;
 
-            // Uppdatera HTML-elementet för att visa flagga, invånare och huvudstad
+            // Uppdatera HTML-elementet för att visa flagga
             resultDiv.innerHTML = `
             <img src="${flagURL}" alt="Flagga för ${countryName}" class="flag-img">
             `;
+
         } else {
             // Om landet inte hittades, visa ett felmeddelande
             resultDiv.innerHTML = ""; // Visa ingen bild
-            alert("Landet kunde inte hittas.");
+            alert("Tyvärr kunde vi inte hämta flaggan för detta land, njut av väderinformationen istället!");
         }
     })
     .catch((error) => {
