@@ -187,12 +187,8 @@ input[type="text"] {
 
 /* dölj vid klick på sök i sökformuläret */
 
-#indexpic {
+#indexpic.hidden {
     display: none; 
-}
-
-#indexpic.show {
-    display: block; 
 }
 
 
