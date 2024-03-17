@@ -18,8 +18,7 @@ document.getElementById("searchForm").addEventListener("submit", async function(
     var destination = document.getElementById("destination").value;
     try {
         await getWeatherForecast(destination);
-        // Dölj animering på startsidan genom att ta bort klassen "show"
-        document.getElementById("indexpic").classList.remove("show");
+
     } catch (error) {
         console.error('Det uppstod ett fel:', error);
         alert("Väderprognos ej tillgänglig för angiven plats.");
