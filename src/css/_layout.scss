@@ -76,17 +76,18 @@ nav {
 
     li {
         display: inline;
+    }
 
-        a {
-            text-decoration: none;
-            color: #000000;
+     a {
+        text-decoration: none;
+        color: #000000;
 
-            &:hover {
+        &:hover {
                 color: base.$hover-blue;
-            }
         }
     }
 }
+
 
 span {
     color: base.$standard-black;
