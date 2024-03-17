@@ -64,4 +64,4 @@ async function displayCountriesTable(countriesOfInterest) {
     }
 }
 
-export { getCountriesData, displayCountriesTable };
+export { displayCountriesTable };
