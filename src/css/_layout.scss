@@ -428,12 +428,13 @@ footer p {
     }
 
     #weatherInfo {
-        width: 400px;
+        width: 300px;
         font-size: 13px;
     }
     .weather-icon, .temperature-icon {
         width: 30px;
         height: 30px;
+        margin-left: 10px;
     }
     #picture-grid {
         grid-template-columns: repeat(1, 1fr);
