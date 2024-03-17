@@ -173,6 +173,29 @@ input[type="text"] {
     background-color: base.$hover-blue;
 }
 
+/* bild-animering på startsidan */
+
+#indexpic {
+    width: base.$reccuring-width;
+    height: 600px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    animation: slide 15s infinite;
+}
+
+/* dölj vid klick på sök i sökformuläret */
+
+#indexpic {
+    display: none; 
+}
+
+#indexpic.show {
+    display: block; 
+}
+
+
 /* Styling för väder-rutan med väderinfo */
 
 #weatherInfo {
@@ -320,6 +343,9 @@ footer p {
         width: 400px;
     }
     
+    #indexpic {
+        height: 400px;
+    }
 }
 
 /* TABLETS */
@@ -395,6 +421,10 @@ footer p {
         order: 3; 
         width: 75px;
         margin: 0 auto;
+    }
+    
+    #indexpic {
+        height: 300px;
     }
 
     #weatherInfo {
