@@ -137,15 +137,19 @@ h1 {
     animation-direction: alternate;
 }
 
+/*-----STARTSIDA-----*/
+
 /* sökformulär på startsidan */
 
 #searchForm {
+    display: flex;
     background-color: base.$primary-blue;
     padding: 10px;
     border-radius: 5px;
 }
 
 input[type="text"] {
+    flex: 1;
     padding: 5px;
     border: 1px solid base.$standard-white;
     border-radius: 5px;
@@ -323,4 +327,49 @@ footer p {
     font-weight: 500;
     padding-top: 20px;
     color: base.$standard-white;
+}
+
+/* ---MEDIA QUERIES--- */
+
+/* Egen media query för sökformulär och indexpic på startsidan */
+
+@media only screen and (min-width: 800px) and (max-width: 1020px) {
+  
+    input[type="text"] {
+        width: 400px;
+    }
+    
+    #indexpic {
+        height: 400px;
+    }
+}
+
+/* TABLETS */
+
+@media only screen and (min-width: 700px) and (max-width: 960px) {
+
+    h1 {
+        font-size: 35px;
+    }
+    main {
+        width: 85%;
+    }
+
+    #weatherInfo {
+        width: auto;
+    }
+    #api-table {
+        width: auto;
+    }
+    
+    .rotate img {
+        width: 90%;
+    }
+    
+    /* generell styling för footer */
+    
+    footer {
+        height: 90px;
+    }
+    
 }
