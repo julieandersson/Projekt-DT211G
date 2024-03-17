@@ -131,8 +131,9 @@ function displayWeatherForecast(weatherData, destination) {
                     temperatureIcon = new URL('./../images/minustemp.png', import.meta.url);
                 }
 
-                var iconHTML = "<img src='" + weatherIcon + "' alt='Vädersymbol' style='width: 70px; height: 70px;' class='weather-icon'>";
-                iconHTML += "<img src='" + temperatureIcon + "' alt='Temperaturikon' style='width: 70px; height: 70px;' class='temperature-icon'>";
+                var iconHTML = "<img src='" + weatherIcon + "' alt='Vädersymbol' class='weather-icon'>";
+                iconHTML += "<img src='" + temperatureIcon + "' alt='Temperaturikon' class='temperature-icon'>";
+
 
                 var iconCell = row.insertCell();
                 iconCell.innerHTML = iconHTML;
