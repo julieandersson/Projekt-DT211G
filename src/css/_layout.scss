@@ -102,14 +102,14 @@ em {
 main {
     background-color: base.$background-beige;
     opacity: 80%;
-    width: 90%;
+    width: base.$reccuring-width;
     margin: 0 auto;
     border-radius: 5px;
     box-shadow: base.$box-shadow;
 }
 
 article {
-    width: 90%;
+    width: base.$reccuring-width;
     max-width: 80ch;
     margin: 0 auto;
     line-height: 1.8em;
@@ -163,7 +163,7 @@ input[type="text"] {
 }
 
 #indexpic {
-    width: 90%;
+    width: base.$reccuring-width;
     height: 600px;
     display: block;
     margin: 0 auto;
@@ -275,7 +275,7 @@ input[type="text"] {
 
 #api-table {
     border-collapse: collapse;
-    width: 90%;
+    width: base.$reccuring-width;
     margin: 0 auto;
     background-color: base.$background-beige;
     opacity: 80%;
@@ -290,7 +290,6 @@ input[type="text"] {
     height: 50px;
     width: auto;
 }
-
 
 footer {
     height: 80px;
