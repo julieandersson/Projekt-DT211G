@@ -10,7 +10,7 @@ body {
     font-family: base.$primary-font;
     background-image: url("../images/beachbackground.jpg?width=1100&as=webp");
     background-position: center 30%;
-    background-size: 100vw auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
