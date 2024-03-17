@@ -14,24 +14,22 @@ body {
 }
 
 .spain-background {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh; 
+    @include component.background;
     background-image: url('../images/background1.jpg?as=webp&width=1800');
 }
 
 .italy-background {
-    @extend .spain-background;
+    @include component.background;
     background-image: url('../images/background2.jpg?as=webp&width=1800');
 }
 
 .france-background {
-    @extend .spain-background; 
+    @include component.background;
     background-image: url('../images/background3.jpg?as=webp&width=1800');
 }
 
 .croatia-background {
-    @extend .spain-background; 
+    @include component.background;
     background-image: url('../images/background4.jpg?as=webp&width=1800');
 }
 
