@@ -3,16 +3,17 @@
 "use strict";
 
 // Hämta data om länder från API
-async function getCountriesData(countriesOfInterest) {
+async function getCountriesData() {
     const response = await fetch("https://restcountries.com/v2/all")
     const countriesData = await response.json()
-    const filteredCountries = countriesData.filter(country => countriesOfInterest.includes(country.name))
-    return filteredCountries
+    return countriesData;
 }
 
 // Visa ländernas information i en tabell
 async function displayCountriesTable(countriesOfInterest) {
-    const countries = await getCountriesData(countriesOfInterest)
+    const countriesData = await getCountriesData();
+
+    const countries = countriesData.filter(country => countriesOfInterest.includes(country.name));
 
     const countriesTableBody = document.getElementById('country-table')
     countriesTableBody.innerHTML = ''
