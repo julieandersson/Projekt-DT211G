@@ -2,6 +2,8 @@
 @use "component";
 @use "animations";
 
+/* Generell styling för body */
+
 body {
     margin: 0;
     padding: 0;
@@ -12,6 +14,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+/* mixin för bakgrundsbilder på respektive htmlsida */
 
 .spain-background {
     @include component.background;
@@ -57,7 +61,7 @@ header {
     color: base.$hover-blue;
 }
 
-/* styling för breadcrumb */
+/* nesting för breadcrumb */
 
 nav {
     width: 265px;
@@ -88,7 +92,7 @@ nav {
     }
 }
 
-
+/* styling för fet text och kursiv text */
 span {
     color: base.$standard-black;
     font-weight: bold;
@@ -98,6 +102,7 @@ em {
     font-size: 12px;
 }
 
+/* styling för main, article, h1-rubrik */
 
 main {
     background-color: base.$background-beige;
@@ -132,6 +137,8 @@ h1 {
     animation-direction: alternate;
 }
 
+/* sökformulär på startsidan */
+
 #searchForm {
     background-color: base.$primary-blue;
     padding: 10px;
@@ -162,6 +169,8 @@ input[type="text"] {
     background-color: base.$hover-blue;
 }
 
+/* bild-animering på startsidan */
+
 #indexpic {
     width: base.$reccuring-width;
     height: 600px;
@@ -171,6 +180,8 @@ input[type="text"] {
     border-radius: 5px;
     animation: slide 15s infinite;
 }
+
+/* dölj vid klick på sök i sökformuläret */
 
 #indexpic {
     display: none; 
@@ -198,6 +209,7 @@ input[type="text"] {
     animation-direction: alternate;
 }
 
+/* visa bara vid klick på sök i sökformuläret */
 
 #weatherInfo.visible {
     display: block; 
@@ -207,7 +219,7 @@ input[type="text"] {
     margin-left: 40px;
 }
 
-/* Styling för element med bilder */
+/* Styling för element med bilder, visa bara vid klick av sök på sökformuläret */
 
 #picture-grid {
     display: grid;
@@ -243,13 +255,6 @@ input[type="text"] {
     display: block;
 }
 
-.rotate img {
-    width: 80%;
-    display: block;
-    margin: 0 auto;
-    border-radius: 5px;
-    animation: rotatePicture 2s linear infinite alternate;
-}
 
 /* Styling för flaggor */
 
@@ -273,6 +278,8 @@ input[type="text"] {
     width: 200px;
 }
 
+/* styling för tabell med landsinformation */
+
 #api-table {
     border-collapse: collapse;
     width: base.$reccuring-width;
@@ -290,6 +297,18 @@ input[type="text"] {
     height: 50px;
     width: auto;
 }
+
+/* styling med animering för bilder på respektive land-sida */
+
+.rotate img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    animation: rotatePicture 2s linear infinite alternate;
+}
+
+/* generell styling för footer */
 
 footer {
     height: 80px;
